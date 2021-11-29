@@ -1,0 +1,213 @@
+<!--HTML-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="form.css" type="text/css">
+</head>
+<body>
+    
+    <header>
+        <div class="nav_links">
+          <nav>
+             <ul>
+                 <li><a href="index.html">Home</a></li>
+                 <li><a href="#">Administration</a>
+                   <div class="submenu-1">
+                   </div>
+                 </li>
+                 <li><a href="#">Departments</a>
+                   <div class="submenu-1">
+                     <ul>
+                       <li><a href="#">Computer Technology</a></li>
+                       <li><a href="#">Civil</a></li>
+                       <li><a href="#">Mechanical</a></li>
+                       <li><a href="#">Electronics & Telecom.</a></li>
+                       <li><a href="#">Information Technology</a></li>
+                     </ul>
+                   </div>
+                 </li>
+                 <li><a href="#">Workshop</a>
+                   <div class="submenu-1">
+                     <ul>
+                       <li><a href="#">Organised by</a></li>
+                       <li><a href="#">Attended by</a></li>
+                       <li><a href="#">Others</a></li>
+                     </ul>
+                   </div></li>
+                 <li><a href="#">Activities</a>
+                   <div class="submenu-1">
+                     <ul>
+                       <li><a href="#">Sports activities</a></li>
+                       <li><a href="activity.php">Competitions</a></li>
+                       <li><a href="#">Cultural activities</a></li>
+                     </ul>
+                   </div></li>
+                 <li><a href="#">About us</a>
+                   <div class="submenu-1">
+                     <ul>
+                      <li><a href="https://www.ycce.edu/#">About YCCE</a></li>
+                      <li><a href="#">Leadership</a></li>
+                      <li><a href="#">Facilities</a></li>
+                      <li><a href="team.html">Our Team</a></li>
+                     </ul>
+                   </div></li>
+             </ul>
+             <a href="#"><button type="button" class="btn1">Contact</button></a>
+           </nav>
+         </div>
+       </header> 
+
+    <div class="main">
+        <h2>⚡Register Here⚡</h2>
+        <form id="register" action="insert.php" method="post">
+            <label>Full Name : </label>
+            <br><br>
+            <input type="text" name="name" id="name" placeholder="Enter your Full Name">
+            <br><br>
+            <label>Registration Number : </label>
+            <br><br>
+            <input type="text" name="regno" id="regno" placeholder="Registration Number">
+            <br><br>
+            <label>Email : </label>
+            <br><br>
+            <input type="email" name="email" id="name" placeholder="Enter a valid email">
+            <br><br>
+            <label>Semester : </label>
+            <br><br>
+            &nbsp;&nbsp;&nbsp;
+            <input type="radio" name="semester" value="3" id="3">
+            &nbsp;
+            <label class="radiobtn" for="3">3</label>
+            &nbsp;&nbsp;&nbsp;
+            <input type="radio" name="semester" value="5" id="5">
+            &nbsp;
+            <label class="radiobtn" for="5">5</label>
+            &nbsp;&nbsp;&nbsp;
+            <input type="radio" name="semester" value="7" id="7">
+            &nbsp;
+            <label class="radiobtn" for="7">7</label>
+            <br><br>
+            <label>Section : </label>
+            <br><br>
+            &nbsp;&nbsp;&nbsp;
+            <input type="radio" name="section" value="A" id="A">
+            &nbsp;
+            <label class="radiobtn" for="A">A</label>
+            &nbsp;&nbsp;&nbsp;
+            <input type="radio" name="section" value="B" id="B">
+            &nbsp;
+            <label class="radiobtn" for="B">B</label>
+            &nbsp;&nbsp;&nbsp;
+            <input type="radio" name="section" value="C" id="C">
+            &nbsp;
+            <label class="radiobtn" for="C">C</label>
+            <br><br>
+            <label>Type of Event : </label>
+            <br><br>
+            &nbsp;&nbsp;&nbsp;
+            <input type="radio" name="eventt" value="Webinar" id="webinar">
+            &nbsp;
+            <label class="radiobtn" for="webinar">Webinar</label>
+            &nbsp;&nbsp;&nbsp;
+            <input type="radio" name="eventt" value="Workshop" id="work">
+            &nbsp;
+            <label class="radiobtn" for="work">Workshop</label>
+            &nbsp;&nbsp;&nbsp;
+            <input type="radio" name="eventt" value="Quiz" id="quiz">
+            &nbsp;
+            <label class="radiobtn" for="quiz">Quiz</label>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+            <input type="radio" name="eventt" value="Coding" id="code">
+            &nbsp;
+            <label class="radiobtn" for="code">Coding Competition</label>
+            &nbsp;&nbsp;&nbsp;
+            <input type="radio" name="eventt" value="Other" id="other">
+            &nbsp;
+            <label class="radiobtn" for="other">Other</label>
+            <br><br>
+            <label>Name of Event : </label>
+            <br><br>
+            <input type="text" name="eventn" id="eventn" placeholder="Enter Name of Event">
+            <br><br>
+            <label>Is it a Group Activity? </label>
+            <br><br>
+            &nbsp;&nbsp;&nbsp;
+            <input type="radio" name="grp" value="Yes" id="yes">
+            &nbsp;
+            <label class="radiobtn" for="yes">Yes</label>
+            &nbsp;&nbsp;&nbsp;
+            <input type="radio" name="grp" value="No" id="no">
+            &nbsp;
+            <label class="radiobtn" for="no">No</label>
+            <br><br>
+            <label>If it is Group Activity enter Group Details (If not enter NA) : </label>
+            <br><br>
+            <textarea id="grpdet" name="grpdet" placeholder="Enter details of Group (Name, Section, Roll No, Registration No, Branch)"></textarea>
+            <br><br>
+            <label>Organizing Body : </label>
+            <br><br>
+            <input type="text" name="org" id="org" placeholder="Enter Name Organizing Body">
+            <br><br>
+            <label>Event Date (From) : </label>
+            <br><br>
+            <input type="date" name="datefrom" id="datef" placeholder="From">
+            <br><br>
+            <label>Event Date (To) : </label>
+            <br><br>
+            <input type="date" name="dateto" id="dateto" placeholder="To">
+            <br><br>
+            <label>Certificate Recieved? </label>
+            <br><br>
+            &nbsp;&nbsp;&nbsp;
+            <input type="radio" name="cert" value="Yes" id="yesc">
+            &nbsp;
+            <label class="radiobtn" for="yesc">Yes</label>
+            &nbsp;&nbsp;&nbsp;
+            <input type="radio" name="cert" value="No" id="noc">
+            &nbsp;
+            <label class="radiobtn" for="noc">No</label>
+            <br><br>
+            <label>Prize/Award Recieved for this Event? </label>
+            <br><br>
+            &nbsp;&nbsp;&nbsp;
+            <input type="radio" name="prz" value="Yes" id="yesp">
+            &nbsp;
+            <label class="radiobtn" for="yesp">Yes</label>
+            &nbsp;&nbsp;&nbsp;
+            <input type="radio" name="prz" value="No" id="nop">
+            &nbsp;
+            <label class="radiobtn" for="nop">No</label>
+            <br><br>
+            <label>Cash Prize Recieved? </label>
+            <br><br>
+            &nbsp;&nbsp;&nbsp;
+            <input type="radio" name="cash" value="Yes" id="yesca">
+            &nbsp;
+            <label class="radiobtn" for="yesca">Yes</label>
+            &nbsp;&nbsp;&nbsp;
+            <input type="radio" name="cash" value="No" id="noca">
+            &nbsp;
+            <label class="radiobtn" for="noca">No</label>
+            <br><br>
+            <label>If Cash Prize is "Yes" then put amount (else put "NA") </label>
+            <br><br>
+            <input type="text" name="cashamt" id="cashamt" placeholder="Enter Cash Amount in ₹">
+            <br><br><br>
+            <button type="submit" value="Submit" name="Submit" id="submit">Submit</button>
+            
+
+        </form>
+        
+    </div> 
+    <br><br>
+    <footer>
+        <div id="footer">
+            <small> < / > with ❤ by students for students</small>
+        </div>
+    </footer>
+</body>
+</html>

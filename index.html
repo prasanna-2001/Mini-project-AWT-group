@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Home</title>
+  <link rel="stylesheet" type="text/css" href="style.css"/>
+
+  <script>
+    function setCookie(cname,cvalue,exdays) {
+      const d = new Date();
+      d.setTime(d.getTime() + (exdays*24*60*60*1000));
+      let expires = "expires=" + d.toGMTString();
+      document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+    }
+    
+    function getCookie(cname) {
+      let name = cname + "=";
+      let decodedCookie = decodeURIComponent(document.cookie);
+      let ca = decodedCookie.split(';');
+      for(let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) == ' ') {
+          c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+          return c.substring(name.length, c.length);
+        }
+      }
+      return "";
+    }
+    
+    function checkCookie() {
+      let user = getCookie("username");
+      if (user != "") {
+        alert("Welcome again " + user);
+      } else {
+         user = prompt("Please enter your name:","");
+         if (user != "" && user != null) {
+           setCookie("username", user, 30);
+         }
+      }
+    }
+    </script>
+
+</head>
+<body onload="checkCookie()">
+    <header>
+     <div class="nav_links">
+       <nav>
+          <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="#">Administration</a>
+              </li>
+              <li><a href="#">Departments</a>
+                <div class="submenu-1">
+                  <ul>
+                    <li><a href="#">Computer Technology</a></li>
+                    <li><a href="#">Civil</a></li>
+                    <li><a href="#">Mechanical</a></li>
+                    <li><a href="#">Electronics & Telecom.</a></li>
+                    <li><a href="#">IT</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li><a href="#">Workshop</a>
+                <div class="submenu-1">
+                  <ul>
+                    <li><a href="#">Organised by</a></li>
+                    <li><a href="#">Attended by</a></li>
+                    <li><a href="#">Others</a></li>
+                  </ul>
+                </div></li>
+              <li><a href="#">Activities</a>
+                <div class="submenu-1">
+                  <ul>
+                    <li><a href="#">Sports Activities</a></li>
+                    <li><a href="activity.php">Competitions</a></li>
+                    <li><a href="#">Cultural Activities</a></li>
+                  </ul>
+                </div></li>
+              <li><a href="#">About us</a>
+                <div class="submenu-1">
+                  <ul>
+                    <li><a href="https://www.ycce.edu/#">About YCCE</a></li>
+                    <li><a href="#">Leadership</a></li>
+                    <li><a href="#">Facilities</a></li>
+                    <li><a href="team.html">Our Team</a></li>
+                  </ul>
+                </div></li>
+          </ul>
+          <a href="#"><button type="button" class="btn1">Contact</button></a>
+        </nav>
+      </div>
+    </header> 
+    <div class="container">
+      <div class="outer">
+        <div class="details">
+          <h1>⚡COMPETITIONS ATTENDED⚡</h1> 
+          <h5>By Students Till Date</h5> 
+          <h3>
+            Howdy Aliens .....!✨ <br>
+
+              – This is the portal for activities and competitions attended by students. <br>
+
+              – Various activities will be conducted and organised by exceptional committees of the University.🤩 <br>
+
+              – Certificates and prizes 🏆 to the scholars will be based on one's performance 🧑‍🎓<br>
+
+              – You'll be just required to upload your name to the list of proficient students ! <br>
+          </h3> 
+          </div>
+        </div>
+      </div>
+      <footer>
+        <div id="footer">
+            <small> < / > with ❤ by students for students</small>
+        </div>
+    </footer>
+</body>
+</html>
